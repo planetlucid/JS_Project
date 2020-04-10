@@ -4,8 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :question
       t.string :answer
-      t.string :language
-
+        
       t.timestamps
     end
   end
