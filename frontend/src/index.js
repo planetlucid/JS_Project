@@ -5,27 +5,28 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 function loadCards () {
-// connect to rails end and grab card data and return it using fetch.
-// get a return as json object - an array of cards. return is also called the promise.
-   
-fetch('http://localhost:3000/cards')
-    .then(function(response){
-    return response.json();
-    })
-    .then(function(cardList) {
-    setup(cardList)
-    })
+    // connect to rails end and grab card data and return it using fetch.
+    // get a return as json object - an array of cards. return is also called the promise.
+    
+    fetch('http://localhost:3000/cards')
+        .then(function(response){
+        return response.json();
+        })
+        .then(function(cardList) {
+        setup(cardList)
+        })
 }
 
 // take card data array, iterate through it, and put date on page.
 function setup(cardList) {
     window.cardList = cardList;
     window.currentPage = 0;
-    renderCard(window.cardList[window.currentPage]);
+    renderCard();
      // debugger;
 }
 
-function renderCard(card) {
+function renderCard() {
+    const card = window.cardList[window.currentPage];
     // added h3 and p tag in div
     let div = document.createElement('div');
     let h3 = document.createElement('h3');
@@ -85,5 +86,5 @@ function prevCard () {
         window.currentPage = window.cardList.length-1
     }
     // render current page
-    renderCard(window.cardList[window.currentPage]);
+    renderCard();
 }
