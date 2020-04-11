@@ -6,13 +6,22 @@
     <title>Flip Code</title>
 </head>
 <body>
-    <h1> Flip Code (This Is The DOM) </h1>
+    <h1> Flip Code</h1>
         
     <div id="card-list">
         <!--keep all cards-->
-      
     </div>
 
+    <div id ="activeCardButtons">
+    <!--Buttons-->
+        <button id="prev" onclick="prevCard()">Previous Card
+        </button>
+        <button id="flip" type="button" value="Flip"  onclick="flipCurrentCard()">Flip Card</button>
+        <button id="next" onclick="nextCard()">Next Card
+        </button>
+    </div>
+
+      
 </body>
 <script src='src/index.js'></script>
 </html>
