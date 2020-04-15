@@ -74,9 +74,10 @@ a {
 	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 
@@ -88,7 +89,7 @@ a {
     bottom: 0;
     left: 0;
     width: 400px;
-    height: 300px;
+    /* height: 35vh; */
     background-color: #fff;
     border-radius: 3px;
     padding: 20px;
@@ -161,7 +162,18 @@ button, #addCardButton {
 
 #addCardButton {
 	height: 55px;
-	background-color: rgb(89, 53, 131);
+	background-color:#7AB059;
+}
+
+#deleteButton {
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	bottom: 1px;
+	background-color: #4D3076;
+	width: 60%;
+	height: 40px;
+	font-size: 20px;
 }
 
 #addTitle {

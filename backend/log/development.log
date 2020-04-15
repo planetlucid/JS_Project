@@ -6076,3 +6076,364 @@ Processing by CardsController#index as */*
 Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 4080)
 
 
+Started GET "/cards" for ::1 at 2020-04-15 19:03:55 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.13ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:04:07 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.59ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:08:27 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.94ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:08:45 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.98ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.8ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:08:59 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.42ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:09:36 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.49ms)
+Completed 200 OK in 27ms (Views: 26.8ms | ActiveRecord: 0.3ms | Allocations: 4083)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:11:54 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.5ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:12:07 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.96ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:13:39 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.28ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:15:11 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.85ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:15:49 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.24ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:16:12 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.13ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:17:41 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.83ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:18:21 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.84ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:28:02 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.17ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.7ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:28:09 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.18ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:29:01 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.14ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:29:29 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.49ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:29:51 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (12.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.75ms)
+Completed 200 OK in 24ms (Views: 11.0ms | ActiveRecord: 12.8ms | Allocations: 4083)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:31:28 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.62ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:32:28 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:32:40 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.68ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:35:28 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.69ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:37:48 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.01ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:38:15 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.63ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:39:33 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.77ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.9ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:40:16 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.65ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:41:13 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:41:20 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.49ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:41:28 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.52ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:41:48 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.52ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms | Allocations: 4083)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:41:54 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.74ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:24 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.15ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:26 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.18ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:33 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.46ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:38 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.26ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:43 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.27ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:42:57 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.67ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:43:13 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.97ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:43:37 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.38ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:48:13 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:49:12 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.61ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:49:21 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.54ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 4083)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:49:40 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.12ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:49:54 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.82ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+

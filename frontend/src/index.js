@@ -131,16 +131,17 @@ function renderCard () {
     let cardItem = document.getElementById("card-item");  
             
         // creating button element  
-        let button = document.createElement('button');  
+        let deleteButton = document.createElement('button');
+        deleteButton.setAttribute("id", "deleteButton");  
             
         // creating text to be displayed on button 
         let text = document.createTextNode("Delete This Card"); 
             
         // appending text to button 
-        button.appendChild(text); 
+        deleteButton.appendChild(text); 
             
         // appending button to div 
-        cardItem.appendChild(button); ; 
+        cardItem.appendChild(deleteButton); ; 
     
 }
 
@@ -149,7 +150,6 @@ function renderCard () {
 function nextCard () {
     // increment current page
     window.currentPage++;  
-    
     // check if current page is a page beyond page count
     if (window.currentPage >= window.cardList.length){
 
@@ -157,8 +157,12 @@ function nextCard () {
         window.currentPage = 0
         
     } 
-    // render current page
     // add code for removing the delete button here
+    let removeButton = document.getElementById("deleteButton");
+    removeButton.remove();
+    
+    // render current page
+    
     renderCard(window.cardList[window.currentPage]);
 }
 
@@ -172,8 +176,11 @@ function prevCard () {
         // if current page is below 0, set page to cardList.length-1
         window.currentPage = window.cardList.length-1
     }
-    // render current page
+   
     // add code for removing the delete button here
+    let removeButton = document.getElementById("deleteButton");
+    removeButton.remove();
+    // render current page
     renderCard();
 }
 
