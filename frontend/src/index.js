@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', function(){
-    // console.log("your js lives")
+// set up canvas before getting data back form server
+setupCard();
 
+document.addEventListener('DOMContentLoaded', function(){
+    // Constructor
     loadCards ();
 })
+
+// Watches the addCard form and when it's submitted it will run the addCard function.
+document.getElementById("addCardForm").addEventListener("submit", addCard);
 
 function loadCards () {
     // connect to rails end and grab card data and return it using fetch.
@@ -13,52 +18,114 @@ function loadCards () {
         return response.json();
         })
         .then(function(cardList) {
-        setup(cardList)
+        setupPage(cardList)
         })
 }
 
-// take card data array, iterate through it, and put date on page.
-function setup(cardList) {
+//  - take card data array, iterate through it, and put date on page. 
+function setupPage(cardList) {
     window.cardList = cardList;
     window.currentPage = 0;
+    
     renderCard();
      // debugger;
 }
 
-function renderCard() {
-    const card = window.cardList[window.currentPage];
-    // added h3 and p tag in div
-    let div = document.createElement('div');
-    let h3 = document.createElement('h3');
-    let p = document.createElement('p')
-    
-    // Created Classes for the above elements
-    div.setAttribute('class', 'card-item');
-    h3.setAttribute('class', 'card-title');
-    p.setAttribute('class', 'card-question');
 
-    // Created some text for div
-    h3.innerText = card.title;
-    //create a form element with a submit type stored in a variable
-    //append that to each card-item, so you have a button that says "reveal" for each card
-    //add an eventlistener for "submit", which would trigger you to
-    //set the innerText to the ANSWER
-    //p.innerText = card.answer;
-    p.innerText = card.question;
+// Add card (in progress)
+function addCard(){
+    event.preventDefault()
+    // let addCardButton = document.getElementById("addCard")
+    let question = document.getElementById("addQuestion").value;
+    let answer = document.getElementById("addAnswer").value;
+    let title = document.getElementById("addTitle").value;
+    let e = document.getElementById("language_id");
+    let language_id = e.options[e.selectedIndex].id;
+
+    let data = {
+        card: {
+            question,
+            answer,
+            title,
+            language_id
+        }
+   
+    };
     
-    // added h3 and p tag inside div
-    div.appendChild(h3);
-    div.appendChild(p);
+    console.log(data);
+    
+    console.log('hello world');
+    // debugger;
+
+    fetch('http://localhost:3000/cards', {
+        method: 'POST',
+        headers: {
+            //check here
+            'Content-Type': 'application/json',
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(data),
+        })
+        .then((response) => {
+            console.log(response.json());
+            // debugger;
+        })
+        .then((data) => {
+            console.log('Success:', data);
+            // debugger;
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            // debugger;
+        });
+}
+ 
+
+
+// stuff that stays the same 
+function setupCard() {
+    
+    // added title and p tag in wrapper
+    let wrapper = document.createElement('div');
+    window.cardTitle = document.createElement('h3');
+    window.question = document.createElement('p');
+    window.answer = document.createElement('p');
+
+    // Created Classes for the above elements
+    // Hide Title and Answer by using 'display=none'
+    wrapper.setAttribute('class', 'card-item');
+    window.question.setAttribute('class', 'card-question');
+    window.cardTitle.setAttribute('class', 'card-title');
+    window.answer.setAttribute('class', 'card-answer');
+    
+    // added title and p tag inside wrapper
+    wrapper.appendChild(window.cardTitle);
+    wrapper.appendChild(window.question);
+    wrapper.appendChild(window.answer);
+    
     // grabbed list we wanted to add onto
     let cardList = document.querySelector ('div#card-list');
     
     // Clear card-list so new data creates a new list of questions and answers
     cardList.innerHTML = "";
 
-    // takes all  cards and renders them to a div named 'card-list'
-    cardList.appendChild(div);
+    // takes all  cards and renders them to a wrapper named 'card-list'
+    cardList.appendChild(wrapper);
 }
-    //Buttons
+
+// stuff that changes every time the card
+function renderCard () { 
+
+    window.question.style.display = 'block';
+    window.cardTitle.style.display = 'none';
+    window.answer.style.display = 'none';
+
+    const card = window.cardList[window.currentPage];
+    window.cardTitle.innerText = card.title;
+    window.answer.innerText = card.answer;
+    window.question.innerText = card.question;
+}
+
     
 function nextCard () {
     // increment current page
@@ -88,3 +155,34 @@ function prevCard () {
     // render current page
     renderCard();
 }
+
+
+function flipCard () {
+    //if answer is hidden
+    if (window.answer.style.display == 'none'){
+        
+        // hide question
+        window.question.style.display = 'none';
+        // reveal answer
+        window.answer.style.display = 'block';
+        // reveal and title
+        window.cardTitle.style.display = 'block';
+        }   
+            else { 
+            
+            // show question 
+            window.question.style.display = 'block';
+            // hide answer
+            window.answer.style.display = 'none';
+            // hide title
+            window.cardTitle.style.display = 'none'; 
+        }
+
+
+
+}
+
+//create a form element with a submit type stored in a variable
+    //append that to each card-item, so you have a button that says "reveal" for each card
+    //add an eventlistener for "submit", which would trigger you to
+    //set the innerText to the ANSWER

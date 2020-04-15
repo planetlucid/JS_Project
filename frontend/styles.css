@@ -1,0 +1,206 @@
+h1 {font-family: 'Poppins', sans-serif;}
+
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+    min-height: 100vh;
+    background-color: #274564;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: #34495e;
+}
+
+a {
+	text-decoration: none;
+}
+
+#header-text, #section-header-text {
+	color: white;
+	margin: 2px;
+}
+
+#section-header-text {
+	font-style: oblique;
+	margin: 2px;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+#card-list
+{
+    margin: 20px auto 20px auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+textarea {
+    width: 260px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#addCard {
+    margin: 20px auto 20px auto;
+    background-color: rgba(30, 37, 48, 0.338);
+    top: 0;
+    right: 0;
+    bottom: 0;
+	left: 0;
+	/* display: inline-block; */
+    width: 300px;
+    /* height: 400px; */
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+#appDiv{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #14181d3f;
+	margin: 5px auto 5px auto;
+	width: 500px;
+}
+
+/*-- Bottom Buttons --*/
+.mobile-bottom-nav {
+	position:fixed;
+	margin: 20px auto 0px auto;
+	bottom:0;
+	left:0;
+	right:0;
+    z-index:1000;
+    will-change:transform;
+	transform: translateZ(0);
+	display:flex;	
+	height:80px;
+	box-shadow: 0 -2px 5px -2px #333;
+    background-color:#03182E;
+    
+}
+
+#activeCardButtons{
+	margin: auto;
+	display: contents;
+}
+
+button, #addCardButton {
+    justify-content:center;
+    /* padding: 20px; */
+    font-size: 20px;
+    color: floralwhite;
+    background-color: #002B43;
+	border: 5px;
+	border-radius: 3px;
+	border-color: powderblue;
+	display: flex;
+	width: 100%;
+	margin: 4px;
+}
+
+#addCardButton {
+	height: 55px;
+	background-color: rgb(89, 53, 131);
+}
+
+#addTitle {
+	
+}
+
+button:hover, #addCardButton:hover {
+    background-color: #2CB3C6;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: row;
+		/* align-items: center; */
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

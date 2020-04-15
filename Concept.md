@@ -22,20 +22,24 @@ Flip Code is a good place to keep notes for tricky edge-cases that are hard to r
 
 # Main Goal
 
-- [ ] Card Page shows one card at a time
-- [ ] Card has Two sides
-- [ ] Side 1 has two buttons: Reveal (to Reveal Answer on BACK), Previous/Next
-- [ ] Side 1 has Language,
-- [ ] Side 1 'What does this code do?'
-- [ ] Side 2 has Title that gives general description of Code.
-- [ ] Side 2 has Description (body copy) that describes Code on side 1 in detail  
-- [ ] Side 2 has buttons for Return (to flip card to FRONT), Next (to go to next card)
-- [ ] 10 Line Limit
 - [ ] Error Messaging
+- [ ] Create new card - C & R of CRUD.  ()
+- [x] SPA - Single Page Application
+- [x] Card Page shows one card at a time
+- [x] Card has Two sides
+- [x] Card Has Prev/ Next and Flip
+- [x] Side 1 - Questions (or actual code)
+- [x] Side 2 has Title that gives general description of Code.
+- [x] Side 2 - Answers (or psuedo code) 
 - [x] No Users for now
 
+
 # Nice To Haves
+- [ ] CSS Styling
+- [ ] Update Card
+- [ ] Side 1 has area that shows Language
 - [ ] Flip Animation
+- [ ] 10 Line Limit
 - [ ] List page with Add, and Delete
 - [ ] View Cards by Programming Language
 - [ ] Numbers Next to Each Line of Code [https://stackoverflow.com/questions/41306797/html-how-to-add-line-numbers-to-a-source-code-block]
@@ -60,7 +64,7 @@ The application must be an HTML, CSS, and JavaScript frontend with a Rails API b
 - [ ] 
 The JavaScript application must use Object Oriented JavaScript (classes) to encapsulate related data and behavior.
 
-- [ ] 
+- [x] 
 The domain model served by the Rails backend must include a resource with at least one has-many relationship. For example, if you were building an Instagram clone, you might display a list of photos with associated comments.
 
 - [ ] 
