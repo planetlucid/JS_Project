@@ -34,8 +34,9 @@ function setupPage(cardList) {
 
 // Add card (in progress)
 function addCard(){
+    
+ 
     event.preventDefault()
-    // let addCardButton = document.getElementById("addCard")
     let question = document.getElementById("addQuestion").value;
     let answer = document.getElementById("addAnswer").value;
     let title = document.getElementById("addTitle").value;
@@ -49,7 +50,6 @@ function addCard(){
             title,
             language_id
         }
-   
     };
     
     console.log(data);
@@ -78,6 +78,9 @@ function addCard(){
             console.error('Error:', error);
             // debugger;
         });
+
+        console.log('Card Added');
+        document.getElementById('addCardForm').reset();
 }
  
 
@@ -93,7 +96,7 @@ function setupCard() {
 
     // Created Classes for the above elements
     // Hide Title and Answer by using 'display=none'
-    wrapper.setAttribute('class', 'card-item');
+    wrapper.setAttribute('id', 'card-item');
     window.question.setAttribute('class', 'card-question');
     window.cardTitle.setAttribute('class', 'card-title');
     window.answer.setAttribute('class', 'card-answer');
@@ -108,12 +111,11 @@ function setupCard() {
     
     // Clear card-list so new data creates a new list of questions and answers
     cardList.innerHTML = "";
-
     // takes all  cards and renders them to a wrapper named 'card-list'
     cardList.appendChild(wrapper);
 }
 
-// stuff that changes every time the card
+// stuff that changes every time the next card appears
 function renderCard () { 
 
     window.question.style.display = 'block';
@@ -124,7 +126,24 @@ function renderCard () {
     window.cardTitle.innerText = card.title;
     window.answer.innerText = card.answer;
     window.question.innerText = card.question;
+    
+    // creating button   
+    let cardItem = document.getElementById("card-item");  
+            
+        // creating button element  
+        let button = document.createElement('button');  
+            
+        // creating text to be displayed on button 
+        let text = document.createTextNode("Delete This Card"); 
+            
+        // appending text to button 
+        button.appendChild(text); 
+            
+        // appending button to div 
+        cardItem.appendChild(button); ; 
+    
 }
+
 
     
 function nextCard () {
@@ -139,6 +158,7 @@ function nextCard () {
         
     } 
     // render current page
+    // add code for removing the delete button here
     renderCard(window.cardList[window.currentPage]);
 }
 
@@ -153,6 +173,7 @@ function prevCard () {
         window.currentPage = window.cardList.length-1
     }
     // render current page
+    // add code for removing the delete button here
     renderCard();
 }
 
@@ -182,7 +203,3 @@ function flipCard () {
 
 }
 
-//create a form element with a submit type stored in a variable
-    //append that to each card-item, so you have a button that says "reveal" for each card
-    //add an eventlistener for "submit", which would trigger you to
-    //set the innerText to the ANSWER
