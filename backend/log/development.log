@@ -6437,3 +6437,311 @@ Processing by CardsController#index as */*
 Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 4080)
 
 
+Started GET "/cards" for ::1 at 2020-04-15 19:52:24 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.12ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:53:05 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.69ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:53:18 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.41ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 19:55:39 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.9ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 20:17:18 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.85ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.8ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-15 20:35:43 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.61ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 1.6ms | Allocations: 4105)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 08:32:05 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (6.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (221.02ms)
+Completed 200 OK in 295ms (Views: 270.8ms | ActiveRecord: 6.3ms | Allocations: 4106)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 08:38:29 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.34ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 08:40:03 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (2.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.01ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 2.1ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 09:05:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (4.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.16ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 4.2ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 09:12:13 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.71ms)
+Completed 200 OK in 34ms (Views: 30.9ms | ActiveRecord: 1.9ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 09:12:50 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.81ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.7ms | Allocations: 4080)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 09:25:27 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.93ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.7ms | Allocations: 4102)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 09:57:09 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (2.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (19.11ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 2.3ms | Allocations: 4105)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:32:48 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.92ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.2ms | Allocations: 4105)
+
+
+Started POST "/cards" for ::1 at 2020-04-16 11:44:21 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"", "answer"=>"", "title"=>"", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (2.2ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["question", ""], ["answer", ""], ["created_at", "2020-04-16 15:44:21.362117"], ["updated_at", "2020-04-16 15:44:21.362117"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+[active_model_serializers] Rendered CardSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 500 Internal Server Error in 196ms (Views: 1.6ms | ActiveRecord: 3.4ms | Allocations: 3653)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/cards_controller.rb:22:in `create'
+Started GET "/cards" for ::1 at 2020-04-16 11:45:23 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.26ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 4234)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:50:19 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.64ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 4215)
+
+
+Started POST "/cards" for ::1 at 2020-04-16 11:50:28 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"", "answer"=>"test omitted question", "title"=>"test omitted question", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "test omitted question"], ["question", ""], ["answer", "test omitted question"], ["created_at", "2020-04-16 15:50:28.542756"], ["updated_at", "2020-04-16 15:50:28.542756"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+[active_model_serializers] Rendered CardSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 500 Internal Server Error in 6ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 3643)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/cards_controller.rb:22:in `create'
+Started GET "/cards" for ::1 at 2020-04-16 11:50:32 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.54ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.8ms | Allocations: 4349)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:56:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.85ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 4375)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:56:25 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.54ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 4350)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:58:08 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.29ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 4350)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 11:58:28 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.52ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 4350)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 12:03:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.86ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 4372)
+
+
+Started GET "/cards" for ::1 at 2020-04-16 12:05:17 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.84ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 4350)
+
+
+Started POST "/cards" for ::1 at 2020-04-16 12:37:59 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"", "answer"=>"", "title"=>"", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.4ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (1.4ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["question", ""], ["answer", ""], ["created_at", "2020-04-16 16:37:59.855918"], ["updated_at", "2020-04-16 16:37:59.855918"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+[active_model_serializers] Rendered CardSerializer with ActiveModelSerializers::Adapter::Attributes (1.06ms)
+Completed 500 Internal Server Error in 17ms (Views: 3.0ms | ActiveRecord: 2.5ms | Allocations: 3653)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/cards_controller.rb:22:in `create'
+Started POST "/cards" for ::1 at 2020-04-16 12:38:00 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"", "answer"=>"", "title"=>"", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["question", ""], ["answer", ""], ["created_at", "2020-04-16 16:38:00.159450"], ["updated_at", "2020-04-16 16:38:00.159450"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+[active_model_serializers] Rendered CardSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 500 Internal Server Error in 6ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 3642)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/cards_controller.rb:22:in `create'
+Started POST "/cards" for ::1 at 2020-04-16 12:38:00 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"", "answer"=>"", "title"=>"", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["question", ""], ["answer", ""], ["created_at", "2020-04-16 16:38:00.532589"], ["updated_at", "2020-04-16 16:38:00.532589"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+[active_model_serializers] Rendered CardSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 500 Internal Server Error in 10ms (Views: 0.6ms | ActiveRecord: 1.3ms | Allocations: 3642)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/cards_controller.rb:22:in `create'
+Started GET "/cards" for ::1 at 2020-04-16 12:38:07 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 4774)
+
+

@@ -82,8 +82,6 @@ function addCard(){
         console.log('Card Added');
         document.getElementById('addCardForm').reset();
 }
- 
-
 
 // stuff that stays the same 
 function setupCard() {
@@ -127,10 +125,10 @@ function renderCard () {
     window.answer.innerText = card.answer;
     window.question.innerText = card.question;
     
-    // creating button   
+    // creating deleteButton that appears on each card  
     let cardItem = document.getElementById("card-item");  
             
-        // creating button element  
+        // creating button element 
         let deleteButton = document.createElement('button');
         deleteButton.setAttribute("id", "deleteButton");  
             
@@ -205,8 +203,37 @@ function flipCard () {
             // hide title
             window.cardTitle.style.display = 'none'; 
         }
-
-
-
 }
 
+        // Prevent Empty form from being submitted - Not working.
+        function empty() {
+            let x;
+            x = document.getElementById("addQuestion").value;
+            if (x == "") {
+                alert("Enter a Valid Roll Number");
+                return false;
+            };
+        }
+
+        // Delete a card - Not Working.
+            document.getElementById("deleteButton").addEventListener("click", function(deleteCard){
+            document.getElementById("card-item").innerHTML = "Hello World";
+        });
+
+        function deleteCard(card){
+            deleteButton = document.getElementById(`deleteButton-${card.id}`)
+            deleteButton.addEventListener('click', (event) => {
+                deleteFetch(card.id)
+                event.target.parentElement.remove();
+            })
+        }
+
+        function deleteFetch(id){
+            fetch(`http://localhost:3000/cards/${id}`, {
+                method: "DELETE", 
+                mode: "cors"
+            }).then (response => response.json())
+            .then((deleteResponse) => {
+                console.log(deleteResponse) 
+            })
+        }

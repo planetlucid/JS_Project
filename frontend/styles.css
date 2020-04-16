@@ -120,7 +120,7 @@ textarea {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	background-color: #14181d3f;
-	margin: 5px auto 5px auto;
+	margin: 5% auto auto auto;
 	width: 500px;
 }
 
@@ -180,7 +180,7 @@ button, #addCardButton {
 	
 }
 
-button:hover, #addCardButton:hover {
+button:hover, #addCardButton:hover, #deleteButton:hover  {
     background-color: #2CB3C6;
 }
 
