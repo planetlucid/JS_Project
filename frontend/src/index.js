@@ -52,7 +52,6 @@ function addCard() {
   console.log(data);
 
   console.log("hello world");
-  // debugger;
 
   fetch("http://localhost:3000/cards", {
     method: "POST",
@@ -63,22 +62,28 @@ function addCard() {
     },
     body: JSON.stringify(data),
   })
-    .then((response) => {
-      console.log(response.json());
-      // debugger;
-    })
-    .then((data) => {
-      console.log("Success:", data);
-      // debugger;
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-      // debugger;
+    .then((response) => response.json())
+    .then((newCardList) => {
+      window.cardList = newCardList;
+      window.currentPage = window.cardList.length - 1;
+      renderCard();
     });
+
+  // .then((response) => {
+  //   console.log(response.json());
+
+  // })
+  // .then((data) => {
+  //   console.log("Success:", data);
+
+  // })
+  // .catch((error) => {
+  //   console.error("Error:", error);
+
+  // });
 
   console.log("Card Added");
   document.getElementById("addCardForm").reset();
-  
 }
 
 // stuff that stays the same
@@ -175,8 +180,7 @@ function prevCard() {
 
   // add code for removing the delete button here
   //   let removeButton = document.getElementById("deleteButton");
-  //   removeButton.remove();
-  // render current page
+
   renderCard();
 }
 

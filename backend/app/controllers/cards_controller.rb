@@ -17,9 +17,10 @@ class CardsController < ApplicationController
   def create
     # binding.pry
     @card = Card.create(card_params)
-    render json: @card
+    # render json: @card
     if @card.save
-      render json: @card, status: :created, location: @card
+      @cards = Card.all
+      render json: @cards, status: :created, location: @card
     else
       render json: @card.errors, status: :unprocessable_entity
     end
