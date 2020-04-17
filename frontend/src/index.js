@@ -34,6 +34,7 @@ function setupPage(cardList) {
 // Add card
 function addCard() {
   event.preventDefault();
+  let cardAlert = document.getElementById("cardAlert");
   let question = document.getElementById("addQuestion").value;
   let answer = document.getElementById("addAnswer").value;
   let title = document.getElementById("addTitle").value;
@@ -69,19 +70,14 @@ function addCard() {
       renderCard();
     });
 
-  // .then((response) => {
-  //   console.log(response.json());
+  cardAlert.setAttribute("class", "active");
+  //
+  cardAlert.innerHTML = "Card Added";
+  setTimeout(() => {
+    cardAlert.classList.remove("active");
+  }, 2000);
 
-  // })
-  // .then((data) => {
-  //   console.log("Success:", data);
-
-  // })
-  // .catch((error) => {
-  //   console.error("Error:", error);
-
-  // });
-
+  //
   console.log("Card Added");
   document.getElementById("addCardForm").reset();
 }
@@ -146,10 +142,6 @@ function renderCard() {
   // creating deleteButton that appears on each card
   let cardItem = document.getElementById("card-item");
 }
-// after delete works, go to the next or previous card automatically.
-// window.setTimeout(() => {
-//     window.location.reload(true);
-//   }, 200);
 
 function nextCard() {
   // increment current page
@@ -160,8 +152,6 @@ function nextCard() {
     window.currentPage = 0;
   }
   // add code for removing the delete button here
-  //   let removeButton = document.getElementById("deleteButton");
-  //   removeButton.remove();
 
   // render current page
 
@@ -216,12 +206,21 @@ function empty() {
 // Delete a card function and.
 
 function deleteCard(event) {
+  const cardAlert = document.getElementById("cardAlert");
+
   const card = window.cardList[window.currentPage];
   console.log("i clicked", card);
 
   deleteButton = document.getElementById("deleteButton");
 
   deleteFetch(card.id);
+
+  cardAlert.setAttribute("class", "active");
+  //
+  cardAlert.innerHTML = "Card Deleted";
+  setTimeout(() => {
+    cardAlert.classList.remove("active");
+  }, 2000);
 }
 
 function deleteFetch(id) {

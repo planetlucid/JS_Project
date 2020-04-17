@@ -8592,3 +8592,463 @@ Processing by CardsController#destroy as */*
 Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.5ms | Allocations: 5392)
 
 
+Started GET "/cards" for ::1 at 2020-04-17 16:16:01 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.6ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.23ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.6ms | Allocations: 3295)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:16:43 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"biscuits", "answer"=>"biscuits", "title"=>"biscuits", "language_id"=>"2"}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.7ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (1.9ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "biscuits"], ["question", "biscuits"], ["answer", "biscuits"], ["created_at", "2020-04-17 20:16:43.741006"], ["updated_at", "2020-04-17 20:16:43.741006"], ["language_id", 2]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.82ms)
+Completed 201 Created in 78ms (Views: 15.6ms | ActiveRecord: 4.8ms | Allocations: 6760)
+
+
+Started DELETE "/cards/43" for ::1 at 2020-04-17 16:16:55 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"43"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 19ms (Views: 6.6ms | ActiveRecord: 1.2ms | Allocations: 5411)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:20:23 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.65ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.2ms | Allocations: 3272)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:21:45 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.29ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms | Allocations: 3273)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:21:59 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.62ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 3272)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:22:27 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.35ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 3272)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:31:13 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CardsController#index as */*
+  [1m[36mCard Load (1.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.88ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 1.5ms | Allocations: 3294)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:31:28 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"pumpkins", "answer"=>"pumpkins", "title"=>"pumpkins", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "pumpkins"], ["question", "pumpkins"], ["answer", "pumpkins"], ["created_at", "2020-04-17 20:31:28.551272"], ["updated_at", "2020-04-17 20:31:28.551272"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.48ms)
+Completed 201 Created in 23ms (Views: 8.6ms | ActiveRecord: 1.6ms | Allocations: 6760)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:35:56 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.25ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 3407)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:36:09 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"squash", "answer"=>"squash", "title"=>"squash", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (1.0ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "squash"], ["question", "squash"], ["answer", "squash"], ["created_at", "2020-04-17 20:36:09.166588"], ["updated_at", "2020-04-17 20:36:09.166588"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.86ms)
+Completed 201 Created in 30ms (Views: 18.3ms | ActiveRecord: 2.2ms | Allocations: 6890)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:37:02 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.5ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 3542)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:37:14 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"grapes", "answer"=>"grapes", "title"=>"grapes", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "grapes"], ["question", "grapes"], ["answer", "grapes"], ["created_at", "2020-04-17 20:37:14.214313"], ["updated_at", "2020-04-17 20:37:14.214313"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 201 Created in 14ms (Views: 6.2ms | ActiveRecord: 1.8ms | Allocations: 7022)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:37:36 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.73ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 3677)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:37:44 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"apples", "answer"=>"apples", "title"=>"apples", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "apples"], ["question", "apples"], ["answer", "apples"], ["created_at", "2020-04-17 20:37:44.138501"], ["updated_at", "2020-04-17 20:37:44.138501"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.14ms)
+Completed 201 Created in 11ms (Views: 3.6ms | ActiveRecord: 1.3ms | Allocations: 7157)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:39:54 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.33ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 3812)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:40:02 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"butts", "answer"=>"butts", "title"=>"butts", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "butts"], ["question", "butts"], ["answer", "butts"], ["created_at", "2020-04-17 20:40:02.440998"], ["updated_at", "2020-04-17 20:40:02.440998"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.23ms)
+Completed 201 Created in 14ms (Views: 5.5ms | ActiveRecord: 1.7ms | Allocations: 7292)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:40:07 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.33ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.5ms | Allocations: 3947)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:40:12 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.34ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.2ms | Allocations: 3947)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:40:19 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"face", "answer"=>"face", "title"=>"face", "language_id"=>"1"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.3ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "face"], ["question", "face"], ["answer", "face"], ["created_at", "2020-04-17 20:40:19.867664"], ["updated_at", "2020-04-17 20:40:19.867664"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 201 Created in 12ms (Views: 3.4ms | ActiveRecord: 1.4ms | Allocations: 7427)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:40:55 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.09ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 4083)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:41:07 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"ankles", "answer"=>"ankles", "title"=>"ankles", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.4ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "ankles"], ["question", "ankles"], ["answer", "ankles"], ["created_at", "2020-04-17 20:41:07.267921"], ["updated_at", "2020-04-17 20:41:07.267921"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.25ms)
+Completed 201 Created in 11ms (Views: 4.9ms | ActiveRecord: 1.3ms | Allocations: 7562)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:41:47 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.02ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 4217)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:41:48 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.0ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 4217)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:41:49 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.03ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms | Allocations: 4217)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:41:49 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.91ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 4217)
+
+
+Started POST "/cards" for ::1 at 2020-04-17 16:41:57 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"toes", "answer"=>"toes", "title"=>"toes", "language_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Create (0.5ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "toes"], ["question", "toes"], ["answer", "toes"], ["created_at", "2020-04-17 20:41:57.258350"], ["updated_at", "2020-04-17 20:41:57.258350"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:19:in `create'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:23:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.68ms)
+Completed 201 Created in 23ms (Views: 14.0ms | ActiveRecord: 1.9ms | Allocations: 7697)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:45:55 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.01ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 4352)
+
+
+Started GET "/cards" for ::1 at 2020-04-17 16:46:08 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.88ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 4352)
+
+
+Started DELETE "/cards/51" for ::1 at 2020-04-17 16:46:14 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"51"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.5ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.75ms)
+Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 1.5ms | Allocations: 6356)
+
+
+Started DELETE "/cards/50" for ::1 at 2020-04-17 16:46:17 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"50"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 50]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.41ms)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 1.3ms | Allocations: 6203)
+
+
+Started DELETE "/cards/49" for ::1 at 2020-04-17 16:46:22 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"49"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 49]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.34ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 1.8ms | Allocations: 6067)
+
+
+Started DELETE "/cards/48" for ::1 at 2020-04-17 16:46:25 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"48"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 48]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.66ms)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 2.0ms | Allocations: 5932)
+
+
+Started DELETE "/cards/47" for ::1 at 2020-04-17 16:46:30 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"47"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.09ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 2.0ms | Allocations: 5797)
+
+
+Started DELETE "/cards/46" for ::1 at 2020-04-17 16:46:39 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"46"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.86ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 1.4ms | Allocations: 5662)
+
+
+Started DELETE "/cards/45" for ::1 at 2020-04-17 16:46:43 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"45"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.3ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.37ms)
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 1.3ms | Allocations: 5527)
+
+
+Started DELETE "/cards/44" for ::1 at 2020-04-17 16:46:45 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"44"}
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:49:in `set_card'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Destroy (0.4ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:40:in `destroy'
+  [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 5392)
+
+

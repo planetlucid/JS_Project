@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flip Code</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-		<h1 class="logo"><a href="#">Flip Code</a></h1>
+      <h1 class="logo"><a href="#">Flip Code</a></h1>
       <ul class="main-nav">
         <!--Might want to add nav items later-->
         <!-- <li><a href="#">Cards By Language</a></li> -->
         <!--<li><a href="#">Item 2</a></li>
         <li><a href="#">Item 3</a></li> -->
       </ul>
-	</header> 
-        
-        
-    
-<div id="appDiv">
-    <!--show all cards-->
-    <div id="card-list"></div>
-        <!-- New Card form -->
-        <div id ="addCard" >
-            <!-- Form for User to type Title -->
-            <form id="addCardForm" action="index.html" method="post">
-                <h3 id="section-header-text">Add A Card</h3>
-                <!-- Dropdown That Allows User to Select Language -->
-                <select id= "language_id">
-                    <option id="1" value="ruby">Ruby</option>
-                    <option id="2" value="javascript">Javascript</option>
-                    <option id="3" value="html">HTML</option>
-                </select>
-                <!-- Form for User to type Question -->
-                <textarea id="addQuestion" cols="30" rows="7" placeholder="Type Your question"></textarea>
-                <!-- Form for User to type Title -->
-                <input id="addTitle" type="text" placeholder="Add Title">
-                <!-- Form for User to type Answer -->
-                <textarea id="addAnswer" cols="30" rows="7" placeholder="Type Your Answer"></textarea>
-                <!-- Submit Form Button -->
-                <input id="addCardButton" type="submit" name="" value="Submit"><br>
-            </form>
-        </div>
-</div>
+    </header>
 
-<!--Prev, Flip and Next Buttons-->
+    <div id="cardAlert"><p>Test Alert</p></div>
+
+    <div id="appDiv">
+      <!--show all cards-->
+      <div id="card-list"></div>
+      <!-- New Card form -->
+      <div id="addCard">
+        <!-- Form for User to type Title -->
+        <form id="addCardForm" action="index.html" method="post">
+          <h3 id="section-header-text">Add A Card</h3>
+          <!-- Dropdown That Allows User to Select Language -->
+          <select id="language_id">
+            <option id="1" value="ruby">Ruby</option>
+            <option id="2" value="javascript">Javascript</option>
+            <option id="3" value="html">HTML</option>
+          </select>
+          <!-- Form for User to type Question -->
+          <textarea
+            id="addQuestion"
+            cols="30"
+            rows="7"
+            placeholder="Type Your question"
+          ></textarea>
+          <!-- Form for User to type Title -->
+          <input id="addTitle" type="text" placeholder="Add Title" />
+          <!-- Form for User to type Answer -->
+          <textarea
+            id="addAnswer"
+            cols="30"
+            rows="7"
+            placeholder="Type Your Answer"
+          ></textarea>
+          <!-- Submit Form Button -->
+          <input
+            id="addCardButton"
+            type="submit"
+            name=""
+            value="Submit"
+          /><br />
+        </form>
+      </div>
+    </div>
+
+    <!--Prev, Flip and Next Buttons-->
     <nav class="mobile-bottom-nav">
-        
-        <div id ="activeCardButtons">
-            <button id="prev" onclick="prevCard()">Previous Card
-            </button>
-            <button id="flip" type="button" value="Flip"  onclick="flipCard()">Flip Card</button>
-            <button id="next" onclick="nextCard()">Next Card
-            </button>
-        </div>
+      <div id="activeCardButtons">
+        <button id="prev" onclick="prevCard()">Previous Card</button>
+        <button id="flip" type="button" value="Flip" onclick="flipCard()">
+          Flip Card
+        </button>
+        <button id="next" onclick="nextCard()">Next Card</button>
+      </div>
     </nav>
-
-    
-
-</body>
-<script src='src/index.js'></script>
-<!-- <script src='src/flash.js'></script> -->
+  </body>
+  <script src="src/index.js"></script>
+  <!-- <script src='src/flash.js'></script> -->
 </html>
