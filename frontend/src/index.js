@@ -30,11 +30,20 @@ function setupPage(cardList) {
   renderCard();
   // debugger;
 }
+const cardAlert = (action) => {
+  let cardAlert = document.getElementById("cardAlert");
+  cardAlert.setAttribute("class", "active");
+  //
+  cardAlert.innerHTML = `Card ${action}`;
+  setTimeout(() => {
+    cardAlert.classList.remove("active");
+  }, 2000);
+};
 
 // Add card
 function addCard() {
   event.preventDefault();
-  let cardAlert = document.getElementById("cardAlert");
+
   let question = document.getElementById("addQuestion").value;
   let answer = document.getElementById("addAnswer").value;
   let title = document.getElementById("addTitle").value;
@@ -69,13 +78,7 @@ function addCard() {
       window.currentPage = window.cardList.length - 1;
       renderCard();
     });
-
-  cardAlert.setAttribute("class", "active");
-  //
-  cardAlert.innerHTML = "Card Added";
-  setTimeout(() => {
-    cardAlert.classList.remove("active");
-  }, 2000);
+  cardAlert("Added");
 
   //
   console.log("Card Added");
@@ -206,8 +209,6 @@ function empty() {
 // Delete a card function and.
 
 function deleteCard(event) {
-  const cardAlert = document.getElementById("cardAlert");
-
   const card = window.cardList[window.currentPage];
   console.log("i clicked", card);
 
@@ -215,12 +216,7 @@ function deleteCard(event) {
 
   deleteFetch(card.id);
 
-  cardAlert.setAttribute("class", "active");
-  //
-  cardAlert.innerHTML = "Card Deleted";
-  setTimeout(() => {
-    cardAlert.classList.remove("active");
-  }, 2000);
+  cardAlert("Deleted");
 }
 
 function deleteFetch(id) {
