@@ -2,24 +2,35 @@
 setupCard();
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Constructor
-  loadCards();
+  Card.loadCards();
 });
 
 // Watches the addCard form and when it's submitted it will run the addCard function.
 document.getElementById("addCardForm").addEventListener("submit", addCard);
 
-function loadCards() {
-  // connect to rails end and grab card data and return it using fetch.
-  // get a return as json object - an array of cards. return is also called the promise.
+// Constructor
+class Card {
+  constructor(question, answer, title, language_id) {
+    this.question = question;
+    this.answer = answer;
+    this.title = title;
+    this.language_id = language_id;
+  }
+  static loadCards() {
+    fetch("http://localhost:3000/cards")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (cardList) {
+        setupPage(cardList);
+      });
+  }
 
-  fetch("http://localhost:3000/cards")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (cardList) {
-      setupPage(cardList);
-    });
+  //   consoleCard() {
+  //     console.log(
+  //       `${this.question} ${this.answer} ${this.title} ${this.language_id}`
+  //     );
+  //   }
 }
 
 //  - take card data array, iterate through it, and put date on page.
@@ -45,6 +56,7 @@ function addCard() {
   event.preventDefault();
 
   let question = document.getElementById("addQuestion").value;
+  //   this.answer;
   let answer = document.getElementById("addAnswer").value;
   let title = document.getElementById("addTitle").value;
   let e = document.getElementById("language_id");
