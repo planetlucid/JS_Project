@@ -15,9 +15,10 @@ class CardsController < ApplicationController
 
   # POST /cards
   def create
-    # binding.pry
     @card = Card.create(card_params)
     # render json: @card
+    # binding.pry
+
     if @card.save
       @cards = Card.all
       render json: @cards, status: :created, location: @card

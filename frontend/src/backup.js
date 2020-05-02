@@ -1,3 +1,4 @@
+backup.js;
 // Function to set up canvas before getting data back form server
 setupCard();
 
