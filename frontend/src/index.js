@@ -18,23 +18,48 @@ class Card {
     this.title = title;
     this.language_id = language_id;
   }
-  //static class level method
+  //static class level method loads this site
   static loadCards() {
-    fetch("http://localhost:3000/cards")
+    // get languages array from api
+    fetch("http://localhost:3000/languages")
       .then(function (response) {
         return response.json();
       })
-      .then(function (cardList) {
-        setupPage(cardList);
+      .then(function (languages) {
+        // save the language object as global variable
+
+        compileCards(languages);
       });
   }
+}
+
+function compileCards(languages) {
+  // let languageList = window.languages;
+  window.languageList = languages;
+  console.log("compiling stuff");
+  // console.log(languages);
+  // create empty array for all cards
+  let compiledCards = [];
+  // map through each item in the array with 2 params(value and index)
+  languages.map((language, i) => {
+    // combine arrays into new array w/o destroying originals
+    compiledCards.push(language.cards);
+  });
+  let sortedCompiledCards = compiledCards.flat();
+  sortedCompiledCards.sort(
+    (a, b) => new Date(b.created_at) - new Date(a.created_at)
+  );
+  console.log("check sorted", sortedCompiledCards);
+
+  setupPage(sortedCompiledCards);
+  console.log("checking on array", compiledCards.flat());
 }
 
 //  - take card data array, iterate through it, and put date on page.
 function setupPage(cardList) {
   window.cardList = cardList;
   window.currentPage = 0;
-
+  console.log("current page search", window.currentPage);
   renderCard();
   // debugger;
 }
@@ -84,14 +109,22 @@ function addCard() {
     // returns response object to as long string and turns it into JSON so it's more organized for browser
     .then((response) => response.json())
 
-    .then((newCardList) => {
-      console.log(newCardList);
-      window.cardList = newCardList;
-      window.currentPage = window.cardList.length - 1;
-      renderCard();
-    })
     .then(() => {
+      return fetch("http://localhost:3000/languages");
+
+      // return fetch("http://localhost:3000/languages");
+      // after post a card, re-compile from the languages list
+      // console.log("something", newCardList);
+      // window.cardList = newCardList;
+      // window.currentPage = window.cardList.length - 1;
+      // renderCard();
+    })
+    .then((response) => response.json())
+    .then((languages) => {
+      console.log("response", languages);
       cardAlert("added");
+      //example of hoisting
+      compileCards(languages);
     });
 
   //
@@ -143,7 +176,7 @@ function setupCard() {
   // appending button to div
   wrapper.appendChild(deleteButton);
 
-  //   let deleteBtn = document.getElementById("deleteButton");
+  // let deleteBtn = document.getElementById("deleteButton");
 
   deleteButton.addEventListener("click", deleteCard);
 }
@@ -155,8 +188,8 @@ function renderCard() {
   window.answer.style.display = "none";
 
   const card = window.cardList[window.currentPage];
-  console.log(card);
-  window.language.innerText = card.language;
+  console.log(card.language_id);
+  window.language.innerText = languageList[card.language_id - 1].name;
   window.cardTitle.innerText = card.title;
   window.answer.innerText = card.answer;
   window.question.innerText = card.question;
@@ -189,10 +222,6 @@ function prevCard() {
     // if current page is below 0, set page to cardList.length-1
     window.currentPage = window.cardList.length - 1;
   }
-
-  // add code for removing the delete button here
-  //   let removeButton = document.getElementById("deleteButton");
-
   renderCard();
 }
 
@@ -244,9 +273,19 @@ function deleteFetch(id) {
     mode: "cors",
   })
     .then((response) => response.json())
-    .then((newCardList) => {
-      window.cardList = newCardList;
-      prevCard();
-      //   console.log(deleteResponse);
+    .then(() => {
+      return fetch("http://localhost:3000/languages");
+    })
+    .then((response) => response.json())
+    .then((languages) => {
+      console.log("response", languages);
+      cardAlert("added");
+      compileCards(languages);
     });
+
+  // .then((newCardList) => {
+  //   window.cardList = newCardList;
+  //   prevCard();
+  //   //   console.log(deleteResponse);
+  // });
 }
