@@ -13,7 +13,9 @@ document.getElementById("addCardForm").addEventListener("submit", addCard);
 // Constructor
 class Card {
   constructor(cardData) {
-    this.instanceCard = cardData;
+    this.question = cardData["question"];
+    this.answer = cardData["answer"];
+    this.title = cardData["title"];
   }
   // prototype function
   addToPage() {
@@ -24,7 +26,6 @@ class Card {
     let answer = document.createElement("p");
     let language = document.createElement("p");
 
-    // Created Classes for the above elements
     // Hide Title and Answer by using 'display=none'
     wrapper.setAttribute("id", "card-item");
     language.setAttribute("id", "card-language");
@@ -32,9 +33,9 @@ class Card {
     cardTitle.setAttribute("class", "card-title");
     answer.setAttribute("class", "card-answer");
 
-    question.innerHTML = this.instanceCard.question;
-    cardTitle.innerHTML = this.instanceCard.title;
-    answer.innerHTML = this.instanceCard.answer;
+    question.innerHTML = this.question;
+    cardTitle.innerHTML = this.title;
+    answer.innerHTML = this.answer;
 
     // added title and p tag inside wrapper
     wrapper.appendChild(language);
@@ -326,10 +327,11 @@ function allCards(event) {
   fetch("http://localhost:3000/cards")
     .then((response) => response.json())
     .then((cards) => {
-      // save the language object as global variable
+      // Clears the page
       clearCardList();
       cards.forEach((card) => {
         let newcard = new Card(card);
+        // debugger;
         newcard.addToPage();
       });
     });
