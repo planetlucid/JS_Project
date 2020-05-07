@@ -14865,3 +14865,289 @@ Processing by CardsController#index as HTML
 Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 3.2ms | Allocations: 5808)
 
 
+Started GET "/languages" for ::1 at 2020-05-06 20:40:02 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.6ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (1.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (33.64ms)
+Completed 200 OK in 55ms (Views: 50.7ms | ActiveRecord: 2.0ms | Allocations: 10224)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 20:40:16 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.65ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 5807)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:20:58 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (1.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (61.42ms)
+Completed 200 OK in 74ms (Views: 65.5ms | ActiveRecord: 2.4ms | Allocations: 10223)
+
+
+Started POST "/cards" for ::1 at 2020-05-06 21:21:17 -0400
+Processing by CardsController#create as JSON
+  Parameters: {"card"=>{"question"=>"test", "answer"=>"test", "title"=>"test", "language_id"=>"1"}}
+  [1m[35m (2.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:18:in `create'
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages" WHERE "languages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:18:in `create'
+  [1m[36mCard Create (0.6ms)[0m  [1m[32mINSERT INTO "cards" ("title", "question", "answer", "created_at", "updated_at", "language_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["question", "test"], ["answer", "test"], ["created_at", "2020-05-07 01:21:17.232716"], ["updated_at", "2020-05-07 01:21:17.232716"], ["language_id", 1]]
+  ↳ app/controllers/cards_controller.rb:18:in `create'
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:18:in `create'
+  [1m[36mCard Load (0.8ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:24:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.54ms)
+Completed 201 Created in 76ms (Views: 17.4ms | ActiveRecord: 5.4ms | Allocations: 9698)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:21:17 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.96ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.5ms | Allocations: 10356)
+
+
+Started DELETE "/cards/131" for ::1 at 2020-05-06 21:21:22 -0400
+Processing by CardsController#destroy as */*
+  Parameters: {"id"=>"131"}
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."id" = ? LIMIT ?[0m  [["id", 131], ["LIMIT", 1]]
+  ↳ app/controllers/cards_controller.rb:50:in `set_card'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cards_controller.rb:41:in `destroy'
+  [1m[36mCard Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cards" WHERE "cards"."id" = ?[0m  [["id", 131]]
+  ↳ app/controllers/cards_controller.rb:41:in `destroy'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cards_controller.rb:41:in `destroy'
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:44:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.91ms)
+Completed 200 OK in 21ms (Views: 7.7ms | ActiveRecord: 1.9ms | Allocations: 8051)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:21:22 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.3ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.29ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms | Allocations: 10193)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:21:36 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.76ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 5788)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:22:23 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.63ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.9ms | Allocations: 10193)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:22:27 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.85ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 5788)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:25:05 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.7ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.29ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 1.3ms | Allocations: 10196)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:25:07 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.83ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.9ms | Allocations: 5788)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:25:40 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.87ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 5788)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:33:38 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.59ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.2ms | Allocations: 10223)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:33:46 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.66ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 5807)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:34:35 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.5ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.82ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 1.1ms | Allocations: 10193)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:34:36 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.77ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 5791)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:37:14 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (22.77ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.7ms | Allocations: 10193)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:37:16 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.69ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 5788)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 21:37:33 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (126.97ms)
+Completed 200 OK in 154ms (Views: 153.1ms | ActiveRecord: 0.3ms | Allocations: 5788)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 21:37:38 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.1ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (1.0ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (252.74ms)
+Completed 200 OK in 291ms (Views: 283.1ms | ActiveRecord: 1.5ms | Allocations: 10194)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 22:12:21 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.3ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.4ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (119.09ms)
+Completed 200 OK in 142ms (Views: 139.1ms | ActiveRecord: 1.0ms | Allocations: 10226)
+
+
+Started GET "/cards" for ::1 at 2020-05-06 22:12:23 -0400
+Processing by CardsController#index as */*
+  [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards"[0m
+  ↳ app/controllers/cards_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.04ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 5807)
+
+
+Started GET "/languages" for ::1 at 2020-05-06 22:12:25 -0400
+Processing by LanguagesController#index as */*
+  [1m[36mLanguage Load (0.2ms)[0m  [1m[34mSELECT "languages".* FROM "languages"[0m
+  ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.2ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 1]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (1.9ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 2]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers]   [1m[36mCard Load (0.1ms)[0m  [1m[34mSELECT "cards".* FROM "cards" WHERE "cards"."language_id" = ?[0m  [["language_id", 3]]
+[active_model_serializers]   ↳ app/controllers/languages_controller.rb:7:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (24.56ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 2.4ms | Allocations: 10194)
+
+

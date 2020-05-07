@@ -12,12 +12,45 @@ document.getElementById("addCardForm").addEventListener("submit", addCard);
 
 // Constructor
 class Card {
-  constructor(question, answer, title, language_id) {
-    this.question = question;
-    this.answer = answer;
-    this.title = title;
-    this.language_id = language_id;
+  constructor(cardData) {
+    this.instanceCard = cardData;
   }
+  // prototype function
+  addToPage() {
+    // added title and p tag in wrapper
+    let wrapper = document.createElement("div");
+    let cardTitle = document.createElement("h3");
+    let question = document.createElement("p");
+    let answer = document.createElement("p");
+    let language = document.createElement("p");
+
+    // Created Classes for the above elements
+    // Hide Title and Answer by using 'display=none'
+    wrapper.setAttribute("id", "card-item");
+    language.setAttribute("id", "card-language");
+    question.setAttribute("class", "card-question");
+    cardTitle.setAttribute("class", "card-title");
+    answer.setAttribute("class", "card-answer");
+
+    question.innerHTML = this.instanceCard.question;
+    cardTitle.innerHTML = this.instanceCard.title;
+    answer.innerHTML = this.instanceCard.answer;
+
+    // added title and p tag inside wrapper
+    wrapper.appendChild(language);
+    wrapper.appendChild(cardTitle);
+    wrapper.appendChild(question);
+    wrapper.appendChild(answer);
+
+    // grabbed list we wanted to add onto
+    let cardList = document.querySelector("div#card-list");
+
+    // Clear card-list so new data creates a new list of questions and answers
+    // cardList.innerHTML = "";
+    // takes all  cards and renders them to a wrapper named 'card-list'
+    cardList.appendChild(wrapper);
+  }
+
   //static class level method loads this site
   static loadCards() {
     // get languages array from api
@@ -31,6 +64,11 @@ class Card {
         compileCards(languages);
       });
   }
+}
+
+function clearCardList() {
+  let cardList = document.querySelector("div#card-list");
+  cardList.innerHTML = "";
 }
 
 function compileCards(languages) {
@@ -282,26 +320,24 @@ function deleteFetch(id) {
       cardAlert("deleted");
       compileCards(languages);
     });
-
 }
 
 function allCards(event) {
   fetch("http://localhost:3000/cards")
-    .then(response => response.json())
-    .then(cards => {
+    .then((response) => response.json())
+    .then((cards) => {
       // save the language object as global variable
-      
-      cards.array.forEach(card => {
-        let newcard = new Card(card)
-        //newcard.rendercard()
+      clearCardList();
+      cards.forEach((card) => {
+        let newcard = new Card(card);
+        newcard.addToPage();
       });
     });
   const card = window.cardList[window.currentPage];
-  
-  
+
   console.log("all cards", card);
 
   deleteButton = document.getElementById("allCards");
- 
+
   cardAlert("All Cards");
 }
