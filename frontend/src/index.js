@@ -279,13 +279,29 @@ function deleteFetch(id) {
     .then((response) => response.json())
     .then((languages) => {
       console.log("response", languages);
-      cardAlert("added");
+      cardAlert("deleted");
       compileCards(languages);
     });
 
-  // .then((newCardList) => {
-  //   window.cardList = newCardList;
-  //   prevCard();
-  //   //   console.log(deleteResponse);
-  // });
+}
+
+function allCards(event) {
+  fetch("http://localhost:3000/cards")
+    .then(response => response.json())
+    .then(cards => {
+      // save the language object as global variable
+      
+      cards.array.forEach(card => {
+        let newcard = new Card(card)
+        //newcard.rendercard()
+      });
+    });
+  const card = window.cardList[window.currentPage];
+  
+  
+  console.log("all cards", card);
+
+  deleteButton = document.getElementById("allCards");
+ 
+  cardAlert("All Cards");
 }
